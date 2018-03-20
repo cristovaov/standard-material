@@ -1,0 +1,28 @@
+<nav class="white" role="navigation">
+  <div class="nav-wrapper container">
+    <a id="logo-container" href="{{ .Site.BaseURL }}" class="brand-logo">{{- .Site.Title -}}</a>
+    <ul class="right hide-on-med-and-down">
+    {{- $currentPage := . -}}
+    {{- range .Site.Menus.headernav }}
+      <li class="{{ if or ($currentPage.IsMenuCurrent "headernav" .) ($currentPage.HasMenuCurrent "headernav" .) }}active{{ end }}">
+        <a href="{{ .URL }}" title="{{ .Title }}">{{- .Name -}}</a>
+      </li>
+    {{ end -}}
+    </ul>
+    <ul id="nav-mobile" class="sidenav" style="transform: translateX(-105%);">
+      <li>
+        <div class="user-view grey-text text-darken-2" style="border-bottom:1px #d1d1d1 solid">
+          <span style="font-weight: bold; font-size:16px">{{- .Site.Title -}}</span>
+        </div>
+      </li>
+    {{- range .Site.Menus.mobilenav }}
+      <li class="{{ if or ($currentPage.IsMenuCurrent "mobilenav" .) ($currentPage.HasMenuCurrent "mobilenav" .) }}active{{ end }}">
+        <a href="{{ .URL }}" title="{{ .Title }}">{{- .Name -}}</a>
+      </li>
+    {{ end -}}
+    </ul>
+    <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+      <i class="material-icons black-text">menu</i>
+    </a>
+  </div>
+</nav>
