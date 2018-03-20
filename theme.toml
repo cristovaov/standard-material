@@ -1,0 +1,16 @@
+name = "Standard Material"
+license = "MIT"
+licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE.md"
+description = "A Hugo starter theme built with Materialize"
+homepage = "http://example.com/"
+tags = ["Material Design"]
+features = []
+min_version = "0.32.4"
+
+[author]
+  name = "Cristovao Verstraeten"
+  homepage = "https://apleasantview.com"
+
+[original]
+  name = "Materialize"
+  homepage = "http://next.materializecss.com/"
