@@ -1,1 +1,2 @@
-*In the beginning there was nothing...*
+# Standard Material
+A Hugo starter theme built with Materialize
