@@ -8,27 +8,35 @@
     <div class="col s6 l3">
       <h5 class="grey-text text-darken-2">Pages</h5>
       <ul>
-      {{- range .Site.Menus.footernav }}
+        {{- range .Site.Menus.footernav }}
         <li>
           <a class="grey-text text-darken-2" href="{{ .URL }}" title="{{ .Title }}">{{- .Name -}}</a>
         </li>
-      {{ end -}}
+        {{ end -}}
       </ul>
     </div>
     <div class="col s6 l3">
       <h5 class="grey-text text-darken-2">Social Links</h5>
       <ul class="social-nav">
-      {{- range .Site.Menus.socialnav }}
+        {{- range .Site.Menus.socialnav }}
         <li>
-          <a class="grey-text text-darken-2" href="{{ .URL }}" title="{{ .Name }}"><img height="32" width="32" src="https://unpkg.com/simple-icons@latest/icons/{{- .Name -}}.svg" /></a>
+          <a class="grey-text text-darken-2" href="{{ .URL }}" title="{{ .Name }}">
+            <img height="32" width="32" src="https://unpkg.com/simple-icons@latest/icons/{{- .Name -}}.svg" alt="{{- .Name -}}"
+            />
+          </a>
         </li>
-      {{ end -}}
+        {{ end -}}
       </ul>
     </div>
   </div>
 </div>
 <div class="footer-copyright">
   <div class="container">
-    <p class="grey-text">&copy; {{ now.Format "2006"}} {{ .Site.Params.copyright -}}<br><small>Standard Material by <em>a pleasant view</em></small></p>
+    <p class="grey-text">&copy; {{ now.Format "2006"}} {{ .Site.Params.copyright -}}
+      <br>
+      <small>Standard Material by
+        <em>a pleasant view</em>
+      </small>
+    </p>
   </div>
 </div>
