@@ -13,7 +13,7 @@
     {{- template "_internal/opengraph.html" . -}}
     {{- template "_internal/twitter_cards.html" . -}}
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/css/materialize.min.css" media="screen,projection">
+    <link rel="stylesheet" href="{{ "css/materialize.min.css" | relURL }}" media="screen,projection">
     <link rel="stylesheet" href="{{ "css/main.css" | relURL }}" type="text/css">
 </head>
 
@@ -21,7 +21,7 @@
     <header>{{ partial "header.html" . }}</header>
     <main id="site-content">{{ block "main" . }}{{ end }}</main>
     <footer class="page-footer grey lighten-3">{{ partial "footer.html" . }}</footer>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-alpha.4/js/materialize.min.js"></script>
+    <script type="text/javascript" src="{{ "js/materialize.min.js" | relURL }}"></script>
     <script>
         var sidenav = document.querySelector('.sidenav');
         var instance = M.Sidenav.init(sidenav);
