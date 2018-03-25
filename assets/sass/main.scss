@@ -1,0 +1,128 @@
+@import "materialize";
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+main {
+  flex: 1 0 auto;
+  width: 100%;
+}
+
+nav ul a,
+nav .brand-logo {
+  color: #444;
+}
+
+.parallax-container {
+  min-height: 380px;
+  line-height: 0;
+  height: auto;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.parallax-container .section {
+  width: 100%;
+}
+
+.icon-block {
+  padding: 0 15px;
+}
+
+.icon-block .material-icons {
+  font-size: inherit;
+}
+
+.icon-block p {
+  line-height: 2rem;
+}
+
+ul.social-nav li {
+  margin: 5px;
+}
+
+ul.social-nav {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-copyright {
+  line-height: 1em;
+}
+
+footer.page-footer {
+  margin: 0;
+}
+
+@media only screen and (min-width: 0) {
+  html {
+    font-size: 16px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  html {
+    font-size: 16.5px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  html {
+    font-size: 17px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .parallax-container .section {
+    position: absolute;
+    top: 40%;
+  }
+
+  #index-banner .section {
+    top: 10%;
+  }
+}
+
+@media only screen and (min-width: 360px) {
+  nav .brand-logo {
+    font-size: 1.2rem;
+  }
+}
+
+@media only screen and (min-width: 390px) {
+  nav .brand-logo {
+    font-size: 1.224rem;
+  }
+}
+
+@media only screen and (min-width: 420px) {
+  nav .brand-logo {
+    font-size: 1.248rem;
+  }
+}
+
+@media only screen and (min-width: 450px) {
+  nav .brand-logo {
+    font-size: 1.272rem;
+  }
+}
+
+@media only screen and (min-width: 480px) {
+  nav .brand-logo {
+    font-size: 1.296rem;
+  }
+}
+
+@media only screen and (min-width: 510px) {
+  nav .brand-logo {
+    font-size: 2.1rem;
+  }
+}
+
+@media only screen and (max-width: 360px) {
+  nav .brand-logo {
+    font-size: 1.2rem;
+  }
+}
