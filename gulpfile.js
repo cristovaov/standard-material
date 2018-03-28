@@ -36,6 +36,12 @@ gulp.task("sass", function() {
     .pipe(gulp.dest("./static/css"));
 });
 
+gulp.task("js", function(){
+  return gulp
+  .src("./assets/js/**/*")
+  .pipe(gulp.dest("./static/js"));
+});
+
 gulp.task("default", function() {
   log("Gulpfile for the Standard Material theme.")
 });
