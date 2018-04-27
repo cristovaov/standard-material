@@ -24,9 +24,7 @@ nav .brand-logo {
 
 .parallax-container {
   min-height: 380px;
-  line-height: 0;
   height: auto;
-  color: rgba(255, 255, 255, 0.9);
 }
 
 .parallax-container .section {
@@ -60,6 +58,12 @@ ul.social-nav {
 
 footer.page-footer {
   margin: 0;
+}
+
+footer h6 {
+  font-size: 100%;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
 @media only screen and (min-width: 0) {
