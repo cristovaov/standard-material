@@ -22,8 +22,27 @@
   <footer class="page-footer grey lighten-3">{{ partial "footer.html" . }}</footer>
   <script src="{{ "js/materialize.min.js" | relURL }}"></script>
   <script>
-    var sidenav = document.querySelector('.sidenav');
-    var instance = M.Sidenav.init(sidenav);
+    function ready(fn) {
+      if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        fn();
+      } else {
+        document.addEventListener('DOMContentLoaded', fn);
+      }
+    }
+
+    function init() {
+      var sidenavEl = document.querySelector('.sidenav');
+      var sidenavInit = M.Sidenav.init(sidenavEl);
+      
+      window.onkeyup = function(event){
+        if (event.keyCode == 27) {
+          var instance = M.Sidenav.getInstance(sidenavEl);
+          instance.close();
+        }
+      }
+    }
+
+    ready(init);
   </script>
 </body>
 
